@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex,nofollow"><title>Admin | Centinel</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@600;700;800&family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/admin.css">
+</head>
+<body>
+  <main class="admin-shell">
+    <header><a href="/" class="brand"><span>C</span><strong>CENTINEL</strong></a><div><p>Panel de demostración</p><h1>Leads recibidos</h1></div><button id="logout" class="ghost" hidden>Cerrar sesión</button></header>
+    <section class="login-card" id="login-card">
+      <p class="kicker">Acceso privado</p><h2>Ingresa la clave de administración</h2>
+      <form id="login-form"><label>Contraseña<input type="password" name="password" required autocomplete="current-password"></label><button>Entrar al panel</button><p class="status" role="status"></p></form>
+    </section>
+    <section id="dashboard" hidden>
+      <div class="stats"><article><span>Total</span><strong id="total">0</strong></article><article><span>Evaluaciones</span><strong id="evaluaciones">0</strong></article><article><span>Visitas</span><strong id="visitas">0</strong></article><article><span>Promedio alertas</span><strong id="promedio">—</strong></article></div>
+      <div class="toolbar"><div><button class="filter active" data-filter="todos">Todos</button><button class="filter" data-filter="evaluacion">Evaluaciones</button><button class="filter" data-filter="visita">Visitas</button></div><button id="reset" class="danger">Reiniciar demo</button></div>
+      <div class="empty" id="empty" hidden><strong>Aún no hay leads</strong><p>Cuando alguien complete el diagnóstico o solicite una visita, aparecerá aquí.</p></div>
+      <div class="lead-list" id="lead-list"></div>
+    </section>
+  </main>
+  <dialog id="confirm-dialog"><h2>¿Dejar la demo en blanco?</h2><p>Se eliminarán todos los leads guardados. Esta acción no se puede deshacer.</p><div><button id="cancel-reset" class="ghost">Cancelar</button><button id="confirm-reset" class="danger">Sí, eliminar todo</button></div></dialog>
+  <script src="/admin.js" defer></script>
+</body>
+</html>

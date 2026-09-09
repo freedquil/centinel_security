@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Evalúa la gestión de seguridad de tu empresa y agenda una visita técnica con Centinel.">
+  <title>Centinel | Seguridad que responde</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@500;600;700;800;900&family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="site-header" id="inicio">
+    <a class="brand" href="#inicio" aria-label="Centinel, inicio">
+      <span class="brand-mark">C</span>
+      <span><strong>CENTINEL</strong><small>SECURITY SERVICE</small></span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav">Menú</button>
+    <nav id="main-nav" aria-label="Navegación principal">
+      <a href="#atraccion">Detecta</a>
+      <a href="#interaccion">Evalúa</a>
+      <a href="#deleite">Prepárate</a>
+      <a class="nav-cta" href="#evaluacion">Evaluar mi servicio</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="atraccion">
+      <div class="hero-image" role="img" aria-label="Operador de seguridad revisando cámaras de monitoreo"></div>
+      <div class="hero-overlay"></div>
+      <div class="hero-content wrap">
+        <p class="eyebrow">01 · Detecta el problema</p>
+        <h1>El problema no es que un guardia falte.<br><em>Es que nadie responda cuando ocurre.</em></h1>
+        <p class="hero-copy">Contratar seguridad debería disminuir tu carga operativa, no convertirte en supervisor de tu propio proveedor.</p>
+        <div class="signals" aria-label="Señales de alerta">
+          <article><span>01</span><strong>Rotación constante</strong></article>
+          <article><span>02</span><strong>Puestos sin cobertura</strong></article>
+          <article><span>03</span><strong>Falta de supervisión y respuesta</strong></article>
+        </div>
+        <blockquote>“Contraté seguridad para no preocuparme, pero termino supervisándola yo.”</blockquote>
+        <a class="button button-light" href="#interaccion">Conoce las señales de alerta <span>↓</span></a>
+      </div>
+    </section>
+
+    <section class="evaluation-section" id="interaccion">
+      <div class="wrap split-heading">
+        <div>
+          <p class="eyebrow dark">02 · Evalúa tu servicio</p>
+          <h2>¿Tu seguridad funciona como un sistema?</h2>
+        </div>
+        <p>Responde estas cinco preguntas. Te mostraremos una lectura inicial y podrás descargar la checklist completa.</p>
+      </div>
+
+      <form class="diagnostic-card wrap" id="evaluacion" novalidate>
+        <div class="questions">
+          <fieldset data-question="supervision">
+            <legend><span>01</span> ¿Existe supervisión periódica del personal?</legend>
+            <div class="choice"><label><input type="radio" name="supervision" value="si" required> Sí</label><label><input type="radio" name="supervision" value="no"> No</label></div>
+          </fieldset>
+          <fieldset data-question="reemplazo">
+            <legend><span>02</span> ¿Hay capacidad de reemplazo frente a ausencias?</legend>
+            <div class="choice"><label><input type="radio" name="reemplazo" value="si" required> Sí</label><label><input type="radio" name="reemplazo" value="no"> No</label></div>
+          </fieldset>
+          <fieldset data-question="comunicacion">
+            <legend><span>03</span> ¿Recibes información oportunamente?</legend>
+            <div class="choice"><label><input type="radio" name="comunicacion" value="si" required> Sí</label><label><input type="radio" name="comunicacion" value="no"> No</label></div>
+          </fieldset>
+          <fieldset data-question="puntosCriticos">
+            <legend><span>04</span> ¿Conoces los puntos críticos de tu instalación?</legend>
+            <div class="choice"><label><input type="radio" name="puntosCriticos" value="si" required> Sí</label><label><input type="radio" name="puntosCriticos" value="no"> No</label></div>
+          </fieldset>
+          <fieldset data-question="respuestaTerreno">
+            <legend><span>05</span> ¿Existe capacidad de respuesta en terreno?</legend>
+            <div class="choice"><label><input type="radio" name="respuestaTerreno" value="si" required> Sí</label><label><input type="radio" name="respuestaTerreno" value="no"> No</label></div>
+          </fieldset>
+        </div>
+
+        <div class="lead-panel">
+          <p class="panel-kicker">Recibe tu checklist</p>
+          <h3>Completa tus datos para ver el resultado</h3>
+          <div class="form-grid">
+            <label>Nombre<input name="nombre" autocomplete="given-name" required></label>
+            <label>Apellido<input name="apellido" autocomplete="family-name"></label>
+            <label class="full">Empresa<input name="empresa" autocomplete="organization" required></label>
+            <label>Cargo<input name="cargo" autocomplete="organization-title"></label>
+            <label>Teléfono<input name="telefono" inputmode="tel" autocomplete="tel"></label>
+            <label class="full">Correo corporativo<input type="email" name="email" autocomplete="email" required></label>
+            <label class="full">Principal necesidad<textarea name="necesidad" rows="3" placeholder="Cuéntanos brevemente qué te preocupa"></textarea></label>
+            <label class="trap" aria-hidden="true">Sitio web<input name="website" tabindex="-1" autocomplete="off"></label>
+          </div>
+          <label class="consent"><input type="checkbox" required> Acepto ser contactado por Centinel respecto de mi evaluación.</label>
+          <button class="button button-red" type="submit">Ver resultado y descargar</button>
+          <p class="form-status" role="status" aria-live="polite"></p>
+        </div>
+      </form>
+
+      <section class="result-card wrap" id="resultado" hidden>
+        <p class="eyebrow dark">Resultado inicial</p>
+        <div class="result-layout">
+          <div class="score"><strong id="alert-count">0</strong><span>señales de alerta</span></div>
+          <div><h3 id="result-title">Tu servicio presenta oportunidades de mejora.</h3><p id="result-copy"></p></div>
+        </div>
+        <div class="result-actions">
+          <a class="button button-dark resource-link" id="ebook-link" href="#ebook-pendiente" target="_blank" rel="noopener">Descargar checklist completa ↗</a>
+          <a class="button button-outline" href="#visita">Agendar visita técnica</a>
+        </div>
+      </section>
+
+      <section class="solution wrap" aria-labelledby="solution-title">
+        <div class="solution-copy"><p class="eyebrow">Sistema integral Centinel</p><h2 id="solution-title">Diseñemos una solución adaptada a tu operación.</h2><p>La seguridad efectiva no depende de una sola persona: conecta personal, supervisión, tecnología y respuesta.</p></div>
+        <div class="system-map">
+          <span>Guardias de seguridad</span><span>Supervisión operativa</span><strong>CENTINEL</strong><span>CCTV y monitoreo</span><span>Respuesta motorizada</span>
+        </div>
+      </section>
+
+      <form class="visit-card wrap" id="visita" novalidate>
+        <div><p class="eyebrow">Conversión principal</p><h2>Agenda una visita técnica gratuita</h2><p>Conoceremos tu instalación y prepararemos una propuesta personalizada.</p></div>
+        <div class="form-grid">
+          <label>Nombre<input name="nombre" autocomplete="given-name" required></label>
+          <label>Apellido<input name="apellido" autocomplete="family-name"></label>
+          <label>Empresa<input name="empresa" autocomplete="organization" required></label>
+          <label>Cargo<input name="cargo" autocomplete="organization-title"></label>
+          <label>Correo corporativo<input type="email" name="email" autocomplete="email" required></label>
+          <label>Teléfono<input name="telefono" autocomplete="tel"></label>
+          <label>Tipo de instalación<input name="tipoInstalacion" placeholder="Bodega, oficina, condominio..."></label>
+          <label>Comuna<input name="comuna"></label>
+          <label class="full">Fecha preferida<input type="date" name="fechaPreferida"></label>
+          <label class="trap" aria-hidden="true">Sitio web<input name="website" tabindex="-1" autocomplete="off"></label>
+          <button class="button button-light full" type="submit">Solicitar visita técnica</button>
+          <p class="form-status full" role="status" aria-live="polite"></p>
+        </div>
+      </form>
+    </section>
+
+    <section class="delight" id="deleite">
+      <div class="wrap delight-grid">
+        <div>
+          <p class="eyebrow dark">03 · Prepara tu visita</p>
+          <h2>Tu visita está agendada. Ahora preparemos una evaluación realmente útil.</h2>
+          <p>No necesitas tener toda la información. La guía te ayuda a ordenar los antecedentes principales antes de reunirnos.</p>
+          <a class="button button-dark resource-link" id="guide-link" href="#guia-pendiente" target="_blank" rel="noopener">Descargar guía para la visita ↗</a>
+        </div>
+        <ul class="prep-list">
+          <li><span>01</span> Horarios de funcionamiento</li>
+          <li><span>02</span> Accesos y zonas críticas</li>
+          <li><span>03</span> Cobertura actual de guardias</li>
+          <li><span>04</span> Sistemas de CCTV disponibles</li>
+          <li><span>05</span> Problemas con el servicio actual</li>
+        </ul>
+      </div>
+      <div class="campaign-close wrap"><p>Tu proveedor debería supervisar la seguridad, <strong>no tú al proveedor.</strong></p><a href="#inicio">Volver arriba ↑</a></div>
+    </section>
+  </main>
+
+  <footer><div class="wrap"><span>Centinel Security Service</span><span>Seguridad privada · Monitoreo · Supervisión</span></div></footer>
+  <script src="/assets/config.js"></script>
+  <script src="/app.js" defer></script>
+</body>
+</html>
